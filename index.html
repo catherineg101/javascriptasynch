@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Javascript Asynch Exercise</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    body {
+      background-color: blueviolet;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      color: white;
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Catherine Garcia Asynch Exercise</h1>
+  <p>Catherine Garcia is working with JavaScript!</p>
+  <button id="b1">Click here!</button>
+  <div id="output"></div>
+  <script>
+    let button1 = document.getElementById("b1");
+    let outputDiv = document.getElementById("output");
+    let fontSize = parseInt(window.getComputedStyle(document.body).fontSize);
+    outputDiv.innerHTML = "Hello World!";
+    
+    button1.addEventListener("click", function () {
+      let message = "Button is clicked!";
+      console.log(message);
+      outputDiv.innerHTML = message;
+      window.alert(message);
+      console.log(fontSize);
+      if (fontSize >= 30) {
+        fontSize = 20;
+        document.body.style.fontSize = fontSize + 'px';
+      }
+    });
+  </script>
+</body>
+
+</html>
+
+
